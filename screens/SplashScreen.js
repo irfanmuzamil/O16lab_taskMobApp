@@ -5,15 +5,12 @@ const SplashScreen = ({ navigation }) => {
   useEffect(() => {
     setTimeout(() => {
       navigation.replace("Login");
-    }, 1000);
+    }, 2000);
   }, [navigation]);
 
   return (
     <View style={styles.container}>
-      <Image
-        source={{ uri: "https://your-image-url-here.png" }}
-        style={styles.logo}
-      />
+      <Image source={require("../assets/logo.png")} style={styles.logo} />
       <Text style={styles.text}>O16LabTask</Text>
     </View>
   );

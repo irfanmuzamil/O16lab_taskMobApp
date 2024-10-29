@@ -1,11 +1,11 @@
 import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
-import AuthNavigator from "./navigation/AuthNavigator";
+import AppNavigator from "./AppNavigator";
+import { AuthProvider } from "./screens/components/context/AuthContext";
 
-export default function App() {
-  return (
-    <NavigationContainer>
-      <AuthNavigator />
-    </NavigationContainer>
-  );
-}
+const App = () => (
+  <AuthProvider>
+    <AppNavigator />
+  </AuthProvider>
+);
+
+export default App;
